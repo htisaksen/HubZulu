@@ -1,0 +1,3 @@
+rootProject.name = 'HubZuluMobile'
+
+include ':app'
