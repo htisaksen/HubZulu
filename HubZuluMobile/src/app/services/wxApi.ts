@@ -13,7 +13,11 @@ export class WxService{
   }
 
   getLatestMetar(ICAO){
-    return this.http.get(this.baseUrl + '/api/metar'+ICAO)
+    return this.http.get(this.baseUrl + '/api/v1/metar'+ICAO)
+    .map(res => res.json());
+  }
+  getLatestTaf(ICAO){
+    return this.http.get(this.baseUrl + '/api/v1/taf'+ICAO)
     .map(res => res.json());
   }
 }
